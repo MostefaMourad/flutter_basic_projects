@@ -11,6 +11,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+  void _goHome(){
+
+  }
+  void _logOut(){
+    
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -19,8 +25,8 @@ class _MyAppState extends State<MyApp>{
         appBar: new AppBar(
           title: new Text('Login Page'),
           actions: <Widget>[
-            new IconButton(icon:new Icon(Icons.home),onPressed: null,),
-            new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
+            new IconButton(icon:new Icon(Icons.home),onPressed:(){ _goHome();},),
+            new IconButton(icon: new Icon(Icons.exit_to_app),onPressed:(){ _logOut();},)
           ],
         ),
         body: new Settings(),
