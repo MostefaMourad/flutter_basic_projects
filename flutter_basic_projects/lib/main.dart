@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp>{
   }
   
   void onSubmit(){
-    print('login in with ');
+    print('login in with '+_login.username);
   }
    
 
