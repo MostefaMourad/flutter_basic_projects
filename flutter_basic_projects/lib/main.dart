@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_projects/settings.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,7 @@ class _MyAppState extends State<MyApp>{
             new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
           ],
         ),
+        body: new Settings(),
       ),
     );
   }
