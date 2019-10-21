@@ -25,12 +25,14 @@ class _MyAppState extends State<MyApp>{
   _MyAppState(){
     _login = new login(onSubmit: (){onSubmit();});
     _settings = new settings();
-    _screen = _settings ;
+    _screen = _login ;
   }
   
   void onSubmit(){
-    print('login in with '+_login.username+' '+_login.password);
+    print('login in with ');
   }
+   
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -43,7 +45,7 @@ class _MyAppState extends State<MyApp>{
             new IconButton(icon: new Icon(Icons.exit_to_app),onPressed:(){ _logOut();},)
           ],
         ),
-        body: _screen,
+        body: new login(onSubmit: (){onSubmit();},),
       ),
     );
   }
