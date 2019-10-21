@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_projects/settings.dart';
 import 'package:flutter_basic_projects/login.dart';
 
 void main() => runApp(MyApp());
@@ -20,11 +19,9 @@ class _MyAppState extends State<MyApp>{
   }
   Widget _screen;
   login _login;
-  settings _settings;
-  
+
   _MyAppState(){
     _login = new login(onSubmit: (){onSubmit();});
-    _settings = new settings();
     _screen = _login ;
   }
   
