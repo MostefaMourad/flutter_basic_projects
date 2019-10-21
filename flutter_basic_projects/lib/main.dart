@@ -12,10 +12,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   void _goHome(){
-
+    print('go Home');
   }
   void _logOut(){
-    
+    print('log Out');
   }
   @override
   Widget build(BuildContext context) {
