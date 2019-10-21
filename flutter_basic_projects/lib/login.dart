@@ -16,13 +16,16 @@ class login extends StatelessWidget {
      
      String get username => _user.text ;
      String get password => _pass.text ;
-     
-
-
 
 @override
   Widget build(BuildContext context) {
 
-    return null;
+    return new Column(
+      children: <Widget>[
+        new TextField(controller: _user,decoration: new InputDecoration(hintText: 'Enter a User name',),),
+        new TextField(controller: _pass,decoration: new InputDecoration(hintText: 'Enter a Password'),obscureText: true,),
+        new RaisedButton(child: new Text('Submit'),onPressed: onSubmit,),       
+      ],
+    );
   }
 }
