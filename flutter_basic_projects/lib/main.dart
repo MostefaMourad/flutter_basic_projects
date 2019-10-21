@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_projects/screens/home.dart';
+import 'package:flutter_basic_projects/screens/second.dart';
+import 'package:flutter_basic_projects/screens/third.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,16 +16,13 @@ class _MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Login Demo',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Login Page'),
-          actions: <Widget>[
-            new IconButton(icon:new Icon(Icons.home),onPressed: null,),
-            new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
-          ],
-        ),
-      ),
+      title: 'Navigation',
+      routes: <String,WidgetBuilder>{
+        '/home' : (BuildContext context) => new Home(),
+        '/second' : (BuildContext context) => new Second(),
+        '/third' : (BuildContext context) => new Third(),
+      },
+      home: new Home(),
     );
   }
 }
