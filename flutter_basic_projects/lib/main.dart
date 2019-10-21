@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic_projects/settings.dart';
+import 'package:flutter_basic_projects/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,19 @@ class _MyAppState extends State<MyApp>{
   void _logOut(){
     print('log Out');
   }
+  Widget _screen;
+  login _login;
+  settings _settings;
+  
+  _MyAppState(){
+    _login = new login(onSubmit: (){onSubmit();});
+    _settings = new settings();
+    _screen = _settings ;
+  }
+  
+  void onSubmit(){
+    print('login in with '+_login.username+' '+_login.password);
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -29,7 +43,7 @@ class _MyAppState extends State<MyApp>{
             new IconButton(icon: new Icon(Icons.exit_to_app),onPressed:(){ _logOut();},)
           ],
         ),
-        body: new Settings(),
+        body: _screen,
       ),
     );
   }
