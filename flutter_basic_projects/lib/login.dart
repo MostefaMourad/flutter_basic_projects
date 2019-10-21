@@ -13,6 +13,12 @@ class login extends StatelessWidget {
     static final TextEditingController _user  = new TextEditingController(); // it will allow us to work with a text field
 
     static final TextEditingController _pass  = new TextEditingController();
+     
+     String get username => _user.text ;
+     String get password => _pass.text ;
+     
+
+
 
 @override
   Widget build(BuildContext context) {
