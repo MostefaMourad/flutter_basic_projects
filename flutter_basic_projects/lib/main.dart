@@ -37,8 +37,9 @@ class _MyAppState extends State<MyApp>{
                 value: _isChecked,
                 onChanged:(bool value){_onChanged(value);},
               ) 
-              ],)
-            
+              ],),
+            new CheckboxListTile(value: _isChecked,
+                onChanged:(bool value){_onChanged(value);},)
             ],
           )
         ),
