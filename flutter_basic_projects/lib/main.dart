@@ -36,6 +36,10 @@ class _MyAppState extends State<MyApp>{
               onChanged: (String value){_onChanged(value);},
               maxLines: 3,
               autocorrect: true,
+              decoration: new InputDecoration(
+                icon: new Icon(Icons.access_alarm),
+                hintText: 'Type...'
+              ),
             ),
             new RaisedButton(child:new Text('Click me!'), onPressed: (){_onPressed();},)
           ],),
