@@ -20,14 +20,15 @@ class _MyAppState extends State<MyApp>{
       _text=value;
     }
   }
-  void _showAlert(String string){
-      AlertDialog alertDialog = new AlertDialog(
-      content: new Text('Mourad',style: new TextStyle(fontSize: 30.0 ),),
+  void _showAlert(String string,BuildContext context){
+    print(_text);
+    AlertDialog alertDialog = new AlertDialog(
+      content: new Text(string,style: new TextStyle(fontSize: 30.0 ),),
       actions: <Widget>[
 
       ],
     );
-    showDialog(context: context,child: alertDialog);
+    showDialog(context: context, child: alertDialog);
   }
    
    
@@ -49,7 +50,7 @@ class _MyAppState extends State<MyApp>{
           new Column(
               children: <Widget>[
                 new TextField(controller: _controller,onChanged: (String value){_onChange(value);}),
-                new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert(_text);},),
+                new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert(_text,context);},),
               ],
           )
         )
