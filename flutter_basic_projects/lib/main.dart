@@ -12,24 +12,23 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   
-     String _text='';
 
      static TextEditingController _controller  = new TextEditingController();
 
     void _onChange(String value){
     setState(){
       _controller.text=value;
-      _text=value;
-      print(_text);
      }
     }
-     
-  @override
-  Widget build(BuildContext context1) {
-        void _showAlert(){
-       print(_text);
-       
+      void _showAlert(){
+        AlertDialog alertDialog = new AlertDialog(
+        content : new Text(_controller.text), 
+        ) ;
+        showDialog(context: context,child: alertDialog);          
      }
+  @override
+  Widget build(BuildContext context) {
+       
     return new MaterialApp(
       title: 'Alert Demo',
       home: new Scaffold(
