@@ -32,7 +32,11 @@ class _MyAppState extends State<MyApp>{
         ),
         body:new Container(
           child: new Column(children: <Widget>[
-            new TextField(onChanged: (String value){_onChanged(value);},),
+            new TextField(
+              onChanged: (String value){_onChanged(value);},
+              maxLines: 3,
+              autocorrect: true,
+            ),
             new RaisedButton(child:new Text('Click me!'), onPressed: (){_onPressed();},)
           ],),
         )
