@@ -22,15 +22,12 @@ class _MyAppState extends State<MyApp>{
      }
     }
      
-     void _showAlert(){
-       print(_controller.text);
-     }
-
- 
-   
   @override
   Widget build(BuildContext context1) {
-
+        void _showAlert(){
+       print(_controller.text);
+       
+     }
     return new MaterialApp(
       title: 'Alert Demo',
       home: new Scaffold(
