@@ -16,32 +16,21 @@ class _MyAppState extends State<MyApp>{
      static TextEditingController _controller  = new TextEditingController();
 
     void _onChange(String value){
+    print(value);
     setState(){
       _text=value;
+     }
     }
-  }
  
    
   @override
   Widget build(BuildContext context1) {
 
-     void _showAlert(String string){
-    print(_text);
-    AlertDialog alertDialog = new AlertDialog(
-      content: new Text('MOURAD',style: new TextStyle(fontSize: 30.0 ),),
-      actions: <Widget>[
-
-      ],
-    );
-    showDialog(context: context1, child: alertDialog);
-  }
-   
-
     return new MaterialApp(
-      title: 'Login Demo',
+      title: 'Alert Demo',
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text('Login Page'),
+          title: new Text('Alert Page'),
           actions: <Widget>[
             new IconButton(icon:new Icon(Icons.home),onPressed: null,),
             new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
@@ -51,7 +40,7 @@ class _MyAppState extends State<MyApp>{
           new Column(
               children: <Widget>[
                 new TextField(controller: _controller,onChanged: (String value){_onChange(value);}),
-                new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert(_text);},),
+                new RaisedButton(child:new Text('Alert'),onPressed: null,),
               ],
           )
         )
