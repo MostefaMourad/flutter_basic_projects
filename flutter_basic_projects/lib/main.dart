@@ -12,7 +12,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp>{
   
     String _text;
+
      static TextEditingController _controller  = new TextEditingController();
+     
     void _onChange(String value){
     setState(){
       _text=value;
