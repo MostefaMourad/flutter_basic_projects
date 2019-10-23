@@ -31,11 +31,14 @@ class _MyAppState extends State<MyApp>{
         body: new Container(
           child:new Column(
             children: <Widget>[
-
-             new Checkbox(
+              new Row(children: <Widget>[
+                new Text('Click it-> '),
+                 new Checkbox(
                 value: _isChecked,
                 onChanged:(bool value){_onChanged(value);},
               ) 
+              ],)
+            
             ],
           )
         ),
