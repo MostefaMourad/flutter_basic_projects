@@ -15,10 +15,12 @@ class _MyAppState extends State<MyApp>{
   String _test='';
 
   void _onPressed(){
-    print('Button Pressed');
+    print('the Text is $_test');
   }
   void _onChanged(String value){
-    print(value);
+    setState((){
+      _test=value;
+    });
   }
   @override
   Widget build(BuildContext context) {
