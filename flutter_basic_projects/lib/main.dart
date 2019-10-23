@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp>{
                 onChanged:(bool value){_onChanged(value);},
                 title: new Text('Click this :'),
                 activeColor: Colors.red,
-                
+                secondary: const Icon( Icons.access_alarm),
                 )
             ],
           )
