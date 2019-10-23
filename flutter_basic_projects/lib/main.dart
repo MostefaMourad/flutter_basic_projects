@@ -16,11 +16,12 @@ class _MyAppState extends State<MyApp>{
      static TextEditingController _controller  = new TextEditingController();
 
     void _onChange(String value){
-    print(value);
     setState(){
       _text=value;
      }
     }
+
+    
  
    
   @override
