@@ -12,20 +12,21 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   
-     
+     String _text='';
 
      static TextEditingController _controller  = new TextEditingController();
 
     void _onChange(String value){
     setState(){
       _controller.text=value;
+      _text=value;
      }
     }
      
   @override
   Widget build(BuildContext context1) {
         void _showAlert(){
-       print(_controller.text);
+       print(_text);
        
      }
     return new MaterialApp(
