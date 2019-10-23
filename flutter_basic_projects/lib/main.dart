@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp>{
   void _showAlert(String string,BuildContext context){
     print(_text);
     AlertDialog alertDialog = new AlertDialog(
-      content: new Text(string,style: new TextStyle(fontSize: 30.0 ),),
+      content: new Text('MOURAD',style: new TextStyle(fontSize: 30.0 ),),
       actions: <Widget>[
 
       ],
