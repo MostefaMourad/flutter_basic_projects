@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp>{
   void _showSnackBar(String value){
      if(value.isEmpty) return ;
      _scaffoldState.currentState.showSnackBar(new SnackBar(
-       content: new Text(value),
+       content: new Text('Mourad'),
      ));
   }
 
