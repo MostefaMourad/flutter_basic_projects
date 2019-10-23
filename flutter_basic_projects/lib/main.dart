@@ -20,6 +20,7 @@ class _MyAppState extends State<MyApp>{
     setState(){
       _controller.text=value;
       _text=value;
+      print(_text);
      }
     }
      
