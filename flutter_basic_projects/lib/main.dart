@@ -12,6 +12,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+  bool _isChecked = false;
+
+  void _onChanged(bool value){
+    setState(() {
+     _isChecked=value; 
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -23,10 +31,11 @@ class _MyAppState extends State<MyApp>{
         body: new Container(
           child:new Column(
             children: <Widget>[
-              new Checkbox(
-                value: null,
-                onChanged: null,
-              )
+
+             new Checkbox(
+                value: _isChecked,
+                onChanged:(bool value){_onChanged(value);},
+              ) 
             ],
           )
         ),
