@@ -11,10 +11,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   
-  
-  @override
-  Widget build(BuildContext context) {
     String _text;
+     static TextEditingController _controller  = new TextEditingController();
     void _onChange(String value){
     setState(){
       _text=value;
@@ -22,14 +20,20 @@ class _MyAppState extends State<MyApp>{
   }
   void _showAlert(String string){
     print(_text);
-  /*  AlertDialog alertDialog = new AlertDialog(
+    AlertDialog alertDialog = new AlertDialog(
       content: new Text(string,style: new TextStyle(fontSize: 30.0 ),),
       actions: <Widget>[
 
       ],
     );
-    showDialog(context: context,child: alertDialog); */
+    showDialog(context: context,child: alertDialog);
   }
+   
+   
+  @override
+  Widget build(BuildContext context) {
+
+
     return new MaterialApp(
       title: 'Login Demo',
       home: new Scaffold(
@@ -43,7 +47,7 @@ class _MyAppState extends State<MyApp>{
         body : new Container(child :
           new Column(
               children: <Widget>[
-                new TextField(onChanged: (String value){_onChange(value);}),
+                new TextField(controller: _controller,onChanged: (String value){_onChange(value);}),
                 new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert(_text);},),
               ],
           )
