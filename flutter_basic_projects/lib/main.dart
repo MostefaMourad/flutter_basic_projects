@@ -13,6 +13,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   String _test='';
+
+  void _onPressed(){
+    print('Button Pressed');
+  }
+  void _onChanged(String value){
+    print(value);
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -23,8 +30,8 @@ class _MyAppState extends State<MyApp>{
         ),
         body:new Container(
           child: new Column(children: <Widget>[
-            new TextField(),
-            new RaisedButton(onPressed: null,)
+            new TextField(onChanged: (String value){_onChanged(value);},),
+            new RaisedButton(child:new Text('Click me!'), onPressed: (){_onPressed();},)
           ],),
         )
       ),
