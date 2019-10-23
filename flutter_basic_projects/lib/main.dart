@@ -11,19 +11,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   
-    String _text;
+    String _text='';
 
      static TextEditingController _controller  = new TextEditingController();
-     
+
     void _onChange(String value){
     setState(){
       _text=value;
     }
   }
   void _showAlert(String string){
-    print(_text);
-    AlertDialog alertDialog = new AlertDialog(
-      content: new Text(string,style: new TextStyle(fontSize: 30.0 ),),
+      AlertDialog alertDialog = new AlertDialog(
+      content: new Text('Mourad',style: new TextStyle(fontSize: 30.0 ),),
       actions: <Widget>[
 
       ],
