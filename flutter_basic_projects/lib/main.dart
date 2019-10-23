@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp>{
       title: 'Login Demo',
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text('Login Page'),
+          title: new Text('TextField Page'),
           actions: <Widget>[
             new IconButton(icon:new Icon(Icons.home),onPressed: null,),
             new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
