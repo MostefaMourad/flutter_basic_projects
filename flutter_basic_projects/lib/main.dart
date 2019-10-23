@@ -16,12 +16,16 @@ class _MyAppState extends State<MyApp>{
 
   void _onPressed(){
     print('the Text is $_test');
+    print(_controller.text);
+
   }
   void _onChanged(String value){
     setState((){
       _test=value;
     });
   }
+
+  final TextEditingController _controller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -38,8 +42,10 @@ class _MyAppState extends State<MyApp>{
               autocorrect: true,
               decoration: new InputDecoration(
                 icon: new Icon(Icons.access_alarm),
-                hintText: 'Type...'
+                hintText: 'Type...',
+                labelText: 'Name',
               ),
+              controller: _controller,
             ),
             new RaisedButton(child:new Text('Click me!'), onPressed: (){_onPressed();},)
           ],),
