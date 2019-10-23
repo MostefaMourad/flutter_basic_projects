@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  
 @override
   _MyAppState createState() {
     return new _MyAppState();
@@ -11,20 +12,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   
-    String _text='';
+     
 
      static TextEditingController _controller  = new TextEditingController();
 
     void _onChange(String value){
     setState(){
       _controller.text=value;
-      _text=value;
      }
     }
      
      void _showAlert(){
-       if(_text.isEmpty) return;
-       print(_text);
+       print(_controller.text);
      }
 
  
