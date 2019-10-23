@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(new MaterialApp(
+  home :MyApp())
+  );
 
 class MyApp extends StatefulWidget {
 @override
