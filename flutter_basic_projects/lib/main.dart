@@ -20,7 +20,12 @@ class _MyAppState extends State<MyApp>{
       _text=value;
     }
   }
-  void _showAlert(String string,BuildContext context){
+ 
+   
+  @override
+  Widget build(BuildContext context1) {
+
+     void _showAlert(String string){
     print(_text);
     AlertDialog alertDialog = new AlertDialog(
       content: new Text('MOURAD',style: new TextStyle(fontSize: 30.0 ),),
@@ -28,13 +33,9 @@ class _MyAppState extends State<MyApp>{
 
       ],
     );
-    showDialog(context: context, child: alertDialog);
+    showDialog(context: context1, child: alertDialog);
   }
    
-   
-  @override
-  Widget build(BuildContext context) {
-
 
     return new MaterialApp(
       title: 'Login Demo',
@@ -50,7 +51,7 @@ class _MyAppState extends State<MyApp>{
           new Column(
               children: <Widget>[
                 new TextField(controller: _controller,onChanged: (String value){_onChange(value);}),
-                new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert(_text,context);},),
+                new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert(_text);},),
               ],
           )
         )
