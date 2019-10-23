@@ -17,11 +17,16 @@ class _MyAppState extends State<MyApp>{
 
     void _onChange(String value){
     setState(){
+      _controller.text=value;
       _text=value;
      }
     }
+     
+     void _showAlert(){
+       if(_text.isEmpty) return;
+       print(_text);
+     }
 
-    
  
    
   @override
@@ -41,7 +46,7 @@ class _MyAppState extends State<MyApp>{
           new Column(
               children: <Widget>[
                 new TextField(controller: _controller,onChanged: (String value){_onChange(value);}),
-                new RaisedButton(child:new Text('Alert'),onPressed: null,),
+                new RaisedButton(child:new Text('Alert'),onPressed: (){_showAlert();},),
               ],
           )
         )
