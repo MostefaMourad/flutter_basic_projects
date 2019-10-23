@@ -20,6 +20,16 @@ class _MyAppState extends State<MyApp>{
         appBar: new AppBar(
           title: new Text('CheckBox Page'),
         ),
+        body: new Container(
+          child:new Column(
+            children: <Widget>[
+              new Checkbox(
+                value: null,
+                onChanged: null,
+              )
+            ],
+          )
+        ),
       ),
     );
   }
