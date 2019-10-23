@@ -12,6 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+  String _test='';
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -19,11 +20,13 @@ class _MyAppState extends State<MyApp>{
       home: new Scaffold(
         appBar: new AppBar(
           title: new Text('TextField Page'),
-          actions: <Widget>[
-            new IconButton(icon:new Icon(Icons.home),onPressed: null,),
-            new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
-          ],
         ),
+        body:new Container(
+          child: new Column(children: <Widget>[
+            new TextField(),
+            new RaisedButton(onPressed: null,)
+          ],),
+        )
       ),
     );
   }
