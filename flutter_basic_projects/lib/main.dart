@@ -27,7 +27,13 @@ class _MyAppState extends State<MyApp>{
         ),
         body:new Container(child:
           new Column(children: <Widget>[
-             new Switch(onChanged: (bool value){_onChanged(value);} ,value: _value,)
+             new Switch(onChanged: (bool value){_onChanged(value);} ,value: _value,),
+             new SwitchListTile(onChanged: (bool value){_onChanged(value);} ,value: _value,
+             secondary: new Icon(Icons.accessible),
+             title: new Text('Click me !'),
+             subtitle: new Text('hey there'),
+             activeColor: Colors.red,
+             )
           ],)
         )
       ),
