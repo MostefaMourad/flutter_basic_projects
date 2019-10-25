@@ -10,6 +10,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+  double _value=0.0;
+
+  void _onChanged(double val){
+   setState(() {
+   _value=val;
+   });
+
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -22,7 +30,7 @@ class _MyAppState extends State<MyApp>{
         body: new Container(
           child: new Column(
             children: <Widget>[
-
+             new Slider(onChanged: (double val){_onChanged(val);},value: _value,)
             ],
           )
         ),
