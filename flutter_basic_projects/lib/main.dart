@@ -36,7 +36,17 @@ class _MyAppState extends State<MyApp>{
           child:new Column(
             children: <Widget>[
              new DropdownButton(
-               items: null,
+               value: _value,
+               items: _values.map((String value){
+               return new DropdownMenuItem(
+                 value: value,
+                 child:new Row(children: <Widget>[
+                   new Icon(Icons.markunread),
+                   new Text('$value'),
+                   
+                 ],)
+                 );
+               }).toList(),
                onChanged: (String val){_onChanged(val);},
              )
             ],
