@@ -31,7 +31,13 @@ List<bool> _data = new List<bool>();
         body: new ListView.builder(
           itemCount: _data.length,
           itemBuilder: (BuildContext context,int index){
-            return new Card();
+            return new Card(child: new Container(child: new Column(children: <Widget>[
+              new Text('this the item $index'),
+              new CheckboxListTile(
+                value: _data[index],
+                onChanged: null,
+              )
+            ],),),);
           },
         )
       ),
