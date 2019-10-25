@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(new MaterialApp(
+  home:MyApp())
+  );
 
 class MyApp extends StatefulWidget {
 @override
@@ -14,16 +16,18 @@ class _MyAppState extends State<MyApp>{
 List<bool> _data = new List<bool>();
 @override
   void initState() {
+    super.initState();
     setState(() {
      for(int i=0;i<10;i++){
        _data.add(false);
      } 
+     print('${_data.length}');
     });
   }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Login Demo',
+      title: 'ListView Demo',
       home: new Scaffold(
         appBar: new AppBar(
           title: new Text('ListView Page'), 
@@ -37,7 +41,9 @@ List<bool> _data = new List<bool>();
                 value: _data[index],
                 onChanged: null,
               )
-            ],),),);
+            ],
+            ),)
+          ,);
           },
         )
       ),
