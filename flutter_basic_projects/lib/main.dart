@@ -10,6 +10,20 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+  String _value=null;
+  List<String> _values = new List<String>();
+   
+   @override
+  void initState() {
+    _values.addAll(['Male','Female','Undeclared']);
+    _value=_values.elementAt(0);
+  }
+  
+  void _onChanged(String val){
+    setState(() {
+     _value=val; 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -17,11 +31,17 @@ class _MyAppState extends State<MyApp>{
       home: new Scaffold(
         appBar: new AppBar(
           title: new Text('Login Page'),
-          actions: <Widget>[
-            new IconButton(icon:new Icon(Icons.home),onPressed: null,),
-            new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
-          ],
         ),
+        body:new Container(
+          child:new Column(
+            children: <Widget>[
+             new DropdownButton(
+               items: null,
+               onChanged: (String val){_onChanged(val);},
+             )
+            ],
+          )
+        )
       ),
     );
   }
