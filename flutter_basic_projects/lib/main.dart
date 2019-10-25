@@ -16,7 +16,7 @@ List<bool> _data = new List<bool>();
   void initState() {
     setState(() {
      for(int i=0;i<10;i++){
-       _data.add(false)
+       _data.add(false);
      } 
     });
   }
