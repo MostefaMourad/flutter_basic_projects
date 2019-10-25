@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp>{
         ),
         body:new Container(child:
           new Column(children: <Widget>[
-             new Switch(onChanged: (bool value){_onChanged(value);} ,value: null,)
+             new Switch(onChanged: (bool value){_onChanged(value);} ,value: _value,)
           ],)
         )
       ),
