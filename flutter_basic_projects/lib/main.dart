@@ -10,6 +10,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+
+List<bool> _data = new List<bool>();
+@override
+  void initState() {
+    setState(() {
+     for(int i=0;i<10;i++){
+       _data.add(false)
+     } 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -18,10 +28,12 @@ class _MyAppState extends State<MyApp>{
         appBar: new AppBar(
           title: new Text('ListView Page'), 
         ),
-        body: new Container(child: new Column(children: <Widget>[
-          
-        ],
-        ),),
+        body: new ListView.builder(
+          itemCount: _data.length,
+          itemBuilder: (BuildContext context,int index){
+            return new Card();
+          },
+        )
       ),
     );
   }
