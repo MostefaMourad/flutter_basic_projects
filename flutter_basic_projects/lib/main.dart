@@ -30,7 +30,10 @@ class _MyAppState extends State<MyApp>{
         body: new Container(
           child: new Column(
             children: <Widget>[
-             new Slider(onChanged: (double val){_onChanged(val);},value: _value,)
+             new Slider(onChanged: (double val){_onChanged(val);},value: _value,
+             min: 0.0,
+             max: 100.0,
+             )
             ],
           )
         ),
