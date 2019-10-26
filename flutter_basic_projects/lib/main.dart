@@ -13,6 +13,12 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>{
   String _lastPressed = 'never';
+  void _onPressed(){
+    setState(() {
+     DateTime current = new DateTime.now();
+     _lastPressed=current.toString(); 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -22,6 +28,12 @@ class _MyAppState extends State<MyApp>{
         body: new Container(child: new Column(children: <Widget>[
           new Text('Last Pressed $_lastPressed'),
         ],)),
+        floatingActionButton: new FloatingActionButton(
+          child: new Icon(Icons.search),
+          onPressed: (){_onPressed();},
+          backgroundColor: Colors.red,
+
+        ),
     );
   }
 }
