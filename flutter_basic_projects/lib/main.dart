@@ -29,6 +29,18 @@ class _MyAppState extends State<MyApp> {
        });
      }
   }
+  Future<Null> _selectTime (BuildContext context) async {
+     final TimeOfDay picked = await showTimePicker(
+       context: context,
+       initialTime: _time
+     );
+
+     if(picked != null && picked != _date){
+       setState((){
+         _time=picked;
+       });
+     }
+  }
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -37,7 +49,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: new Container(
           child: new Column(children: <Widget>[
-            new RaisedButton(child: new Text('Cklick me dude !'),onPressed: (){_selectDate(context);},)
+            new RaisedButton(child: new Text('Cklick me dude !'),onPressed: (){_selectTime(context);},)
           ],),
         ),
     );
