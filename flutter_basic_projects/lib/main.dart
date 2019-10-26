@@ -22,7 +22,8 @@ class _MyAppState extends State<MyApp>{
         drawer: new Drawer(
           child: new Container(child: 
            new Text('MyApp Drawer'),
-          ,),
+           padding: new EdgeInsets.all(32.0),
+          ),
         ),
       ),
     );
