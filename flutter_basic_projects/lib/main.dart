@@ -24,6 +24,11 @@ List<bool> _data = new List<bool>();
      print('${_data.length}');
     });
   }
+  void _onChanged(int i,bool val){
+    setState(() {
+     _data[i]=val; 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -38,8 +43,10 @@ List<bool> _data = new List<bool>();
             return new Card(child: new Container(child: new Column(children: <Widget>[
               new Text('this the item $index'),
               new CheckboxListTile(
+                controlAffinity: ListTileControlAffinity.leading,
                 value: _data[index],
-                onChanged: null,
+                onChanged: (bool value){_onChanged(index, value);},
+
               )
             ],
             ),)
