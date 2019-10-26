@@ -13,7 +13,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   DateTime _date = new DateTime.now();
-  DateTime date = new Ti
   TimeOfDay _time = new TimeOfDay.now();
 
   Future<Null> _selectDate (BuildContext context) async {
@@ -21,7 +20,7 @@ class _MyAppState extends State<MyApp> {
        context: context,
        initialDate: _date,
        firstDate: new DateTime(2016),
-       lastDate: new DateTime(2019)
+       lastDate: new DateTime(2021)
      );
 
      if(picked != null && picked != _date){
