@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(new MaterialApp(home:
+  MyApp()
+  ));
 
 class MyApp extends StatefulWidget {
 @override
@@ -12,17 +14,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Login Demo',
-      home: new Scaffold(
+    return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Login Page'),
-          actions: <Widget>[
-            new IconButton(icon:new Icon(Icons.home),onPressed: null,),
-            new IconButton(icon: new Icon(Icons.exit_to_app),onPressed: null,)
-          ],
+          title: new Text('Demo Page'),
         ),
-      ),
     );
   }
 }
