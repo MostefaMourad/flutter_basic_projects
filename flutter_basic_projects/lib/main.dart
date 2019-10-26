@@ -69,8 +69,13 @@ class _MyAppState extends State<MyApp>{
           title: new Text('Demo Page'),
         ),
         body:new Container(child: new Column(children: <Widget>[
+          new RaisedButton(
+            child: new Text('Click me Dude !'),
+            onPressed: (){_askuser();},
+          )
 
         ],),
+        )
     );
   }
 }
