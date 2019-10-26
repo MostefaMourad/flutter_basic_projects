@@ -12,12 +12,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
+  String _lastPressed = 'never';
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
           title: new Text('Demo Page'),
         ),
+        body: new Container(child: new Column(children: <Widget>[
+          new Text('Last Pressed $_lastPressed'),
+        ],)),
     );
   }
 }
