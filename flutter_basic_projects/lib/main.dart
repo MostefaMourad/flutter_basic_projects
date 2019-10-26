@@ -24,7 +24,33 @@ class _MyAppState extends State<MyApp>{
   } 
 
   Future<Null> _askuser() async {
-    switch(){
+    switch(await showDialog(
+      context: context,
+      child: new SimpleDialog(
+        title: new Text('Do you like DevFest'),
+        children: <Widget>[
+          new SimpleDialogOption(
+            child: const Text('Yess !!!!'),
+            onPressed: (){
+              Navigator.pop(context,Answer.YES);
+            },
+          ),
+          new SimpleDialogOption(
+            child: const Text('No'),
+            onPressed: (){
+              Navigator.pop(context,Answer.NO);
+            },
+          ),
+          new SimpleDialogOption(
+            child: const Text('Maybe ?'),
+            onPressed: (){
+              Navigator.pop(context,Answer.MAYBE);
+            },
+          )
+        ],
+      ),
+    )
+    ){
       case Answer.YES:
            _setAnswer('yes');
            break;
