@@ -20,6 +20,15 @@ class _MyAppState extends State<MyApp>{
           title: new Text('Live Template Page'),
         ),
         body: new Container(child: null,),
+        drawer: new Drawer(child: new Container(
+          padding: new EdgeInsets.all(32.0),
+          child: 
+        new Column(children: <Widget>[
+          new RaisedButton(onPressed: (){Navigator.pop(context);},child: new Text('close'),),  
+        ],
+        )
+        ),
+        ),
     );
   }
 }
