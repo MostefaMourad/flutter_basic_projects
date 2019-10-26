@@ -19,6 +19,11 @@ class _MyAppState extends State<MyApp>{
           title: new Text('Live Template Page'),
         ),
         body: new Container(child: null,),
+        drawer: new Drawer(
+          child: new Container(child: 
+           new Text('MyApp Drawer'),
+          ,),
+        ),
       ),
     );
   }
