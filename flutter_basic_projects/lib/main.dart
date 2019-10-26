@@ -9,6 +9,7 @@ class MyApp extends StatefulWidget {
   }
 }
 
+
 class _MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,12 @@ class _MyAppState extends State<MyApp>{
         ),
         body: new Container(child: null,),
         drawer: new Drawer(
-          child: new Container(child: 
-           new Text('MyApp Drawer'),
+          child: new Container(
            padding: new EdgeInsets.all(32.0),
+           child : new Column(children: <Widget>[
+             new Text('Click to close'),
+             new RaisedButton(onPressed:(){Navigator.pop(context);},child: new Text('Close'),)
+           ],)
           ),
         ),
       ),
